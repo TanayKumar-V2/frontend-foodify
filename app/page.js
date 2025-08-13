@@ -27,7 +27,7 @@ export default function AuthPage() {
     setMessage('');
 
     const endpoint = isLoginMode ? '/api/signin' : '/api/signup';
-    const url = `http://localhost:3001${endpoint}`;
+    const url = `https://foodify-backend-1qug.onrender.com${endpoint}`;
 
     try {
       const response = await fetch(url, {
