@@ -116,7 +116,7 @@ export default function RecipeGeneratorPage() {
     try {
       const token = localStorage.getItem("recipe_token");
       const response = await fetch(
-        "http://localhost:3001/api/generate-recipe",
+        "https://foodify-backend-1qug.onrender.com/api/generate-recipe",
         {
           method: "POST",
           headers: {
@@ -149,7 +149,7 @@ export default function RecipeGeneratorPage() {
     if (!recipeData.content) return;
     const token = localStorage.getItem("recipe_token");
     try {
-      const response = await fetch("http://localhost:3001/api/recipes", {
+      const response = await fetch("hhttps://foodify-backend-1qug.onrender.com/api/recipes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -84,7 +84,7 @@ export default function SavedRecipesPage() {
       return;
     }
     try {
-      const response = await fetch('http://localhost:3001/api/recipes', {
+      const response = await fetch('https://foodify-backend-1qug.onrender.com/api/recipes', {
         headers: { 'Authorization': `Bearer ${token}` },
       });
       if (!response.ok) throw new Error('Failed to fetch recipes.');
@@ -104,7 +104,7 @@ export default function SavedRecipesPage() {
   const handleDeleteRecipe = async (id) => {
     const token = localStorage.getItem('recipe_token');
     try {
-      const response = await fetch(`http://localhost:3001/api/recipes/${id}`, {
+      const response = await fetch(`https://foodify-backend-1qug.onrender.com/api/recipes/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` },
       });
